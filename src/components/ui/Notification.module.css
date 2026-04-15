@@ -1,0 +1,13 @@
+.toast {
+  position: fixed; bottom: 1.5rem; right: 1.5rem;
+  background: var(--ink-primary); color: var(--ink-inverse);
+  font-size: 13px; padding: 10px 20px;
+  border-radius: var(--radius-pill); z-index: 1000;
+  pointer-events: none;
+  transform: translateY(80px); opacity: 0;
+  transition: transform var(--transition-spring), opacity var(--transition-base);
+  max-width: 320px; text-align: center;
+}
+.show { transform: translateY(0); opacity: 1; }
+.success { background: var(--q2-ink); }
+.error   { background: var(--q1-ink); }

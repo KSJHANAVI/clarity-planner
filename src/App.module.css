@@ -1,0 +1,13 @@
+.loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-page);
+}
+
+.loadingMark {
+  font-size: 2.5rem;
+  color: var(--accent-warm);
+  animation: pulse 1.6s ease-in-out infinite;
+}

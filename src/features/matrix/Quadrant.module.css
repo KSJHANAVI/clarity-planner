@@ -1,0 +1,23 @@
+/* Quadrant.module.css */
+.quadrant {
+  background: var(--bg-card); border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg); padding: 1rem 1rem 0.75rem;
+  min-height: 260px; display: flex; flex-direction: column;
+  transition: border-color var(--transition-base), background var(--transition-base);
+}
+.over { border-color: var(--accent-warm); background: var(--bg-surface); }
+
+.q1 .title { color: var(--q1-ink); } .q1 .icon { background: var(--q1-bg); }
+.q2 .title { color: var(--q2-ink); } .q2 .icon { background: var(--q2-bg); }
+.q3 .title { color: var(--q3-ink); } .q3 .icon { background: var(--q3-bg); }
+.q4 .title { color: var(--q4-ink); } .q4 .icon { background: var(--q4-bg); }
+
+.header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; }
+.icon { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.meta { flex: 1; min-width: 0; }
+.title    { font-family: var(--font-serif); font-size: 0.9rem; font-weight: 600; line-height: 1.2; }
+.subtitle { font-size: 11px; color: var(--ink-muted); margin-top: 1px; }
+.count    { font-size: 11px; color: var(--ink-muted); background: var(--bg-surface); border-radius: var(--radius-pill); padding: 2px 8px; white-space: nowrap; align-self: flex-start; flex-shrink: 0; }
+
+.list  { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.empty { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 80px; border: 1.5px dashed var(--border-soft); border-radius: var(--radius-md); font-size: 12px; color: var(--ink-muted); }

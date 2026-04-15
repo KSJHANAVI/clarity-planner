@@ -1,0 +1,40 @@
+.page {
+  min-height: 100vh; display: flex; align-items: center;
+  justify-content: center; padding: 2rem; background: var(--bg-page);
+}
+.card {
+  background: var(--bg-card); border: 1px solid var(--border-soft);
+  border-radius: var(--radius-xl); padding: 2.75rem;
+  max-width: 580px; width: 100%; position: relative; overflow: hidden;
+}
+.card::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 200px; height: 200px; pointer-events: none;
+  background: radial-gradient(circle at top right, rgba(196,149,106,0.07), transparent 70%);
+}
+.dots { display: flex; gap: 6px; margin-bottom: 2rem; }
+.dot {
+  width: 6px; height: 6px; border-radius: var(--radius-pill);
+  background: var(--bg-muted); transition: all var(--transition-base);
+}
+.active { background: var(--accent); width: 22px; border-radius: 3px; }
+.done   { background: var(--accent-warm); }
+
+.step { display: flex; flex-direction: column; }
+.label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--ink-muted); margin-bottom: 0.4rem; }
+.title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 500; line-height: 1.25; margin-bottom: 0.65rem; }
+.desc  { font-size: 14px; color: var(--ink-secondary); line-height: 1.6; margin-bottom: 1.75rem; }
+.fields { display: flex; flex-direction: column; gap: 1.1rem; margin-bottom: 2rem; }
+.footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.progress { font-size: 12px; color: var(--ink-muted); }
+
+.processing { display: flex; flex-direction: column; align-items: center; padding: 3rem 1rem; text-align: center; }
+.spinner {
+  width: 38px; height: 38px; border: 2px solid var(--border-medium);
+  border-top-color: var(--accent); border-radius: 50%;
+  animation: spin 0.9s linear infinite; margin-bottom: 1.5rem;
+}
+.processingMsg { font-family: var(--font-serif); font-size: 1.1rem; font-style: italic; color: var(--ink-secondary); margin-bottom: 0.75rem; min-height: 1.5em; }
+.processingSub { font-size: 13px; color: var(--ink-muted); line-height: 1.6; max-width: 300px; }
+
+@media (max-width: 600px) { .card { padding: 1.75rem; } }

@@ -1,0 +1,43 @@
+.card {
+  background: var(--bg-input); border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md); padding: 8px 10px;
+  display: flex; align-items: flex-start; gap: 7px;
+  cursor: grab; transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast), opacity var(--transition-base);
+  user-select: none; position: relative;
+}
+.card:hover { border-color: var(--border-medium); box-shadow: var(--shadow-card); transform: translateY(-1px); }
+.card:active { cursor: grabbing; }
+.done { opacity: 0.5; cursor: default; }
+.done:hover { transform: none; box-shadow: none; }
+
+.dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+
+.checkbox {
+  width: 16px; height: 16px; border-radius: 4px; flex-shrink: 0; margin-top: 2px;
+  border: 1.5px solid var(--border-medium); background: transparent;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+  color: white;
+}
+.checkbox:hover { border-color: var(--accent); }
+.checked { background: var(--q2-ink); border-color: var(--q2-ink); }
+
+.body { flex: 1; min-width: 0; }
+.text { font-size: 13px; color: var(--ink-primary); line-height: 1.45; word-break: break-word; }
+.done .text { text-decoration: line-through; color: var(--ink-muted); }
+
+.tags { display: flex; gap: 5px; margin-top: 5px; flex-wrap: wrap; }
+.tagGoal     { font-size: 10px; padding: 2px 7px; border-radius: var(--radius-pill); background: rgba(123,94,58,0.09); color: var(--accent); }
+.tagTime     { font-size: 10px; padding: 2px 7px; border-radius: var(--radius-pill); background: rgba(74,90,107,0.09); color: var(--q4-ink); }
+.tagDeadline { font-size: 10px; padding: 2px 7px; border-radius: var(--radius-pill); background: rgba(58,107,74,0.09); color: var(--q2-ink); }
+.overdue     { background: var(--q1-bg); color: var(--q1-ink); }
+
+.deleteBtn {
+  width: 22px; height: 22px; border: none; background: transparent;
+  cursor: pointer; color: var(--ink-muted); border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0; align-self: flex-start;
+}
+.card:hover .deleteBtn { opacity: 1; }
+.deleteBtn:hover { background: var(--q1-bg); color: var(--q1-ink); }

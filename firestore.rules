@@ -1,0 +1,56 @@
+// firestore.rules
+// Deploy with: firebase deploy --only firestore:rules
+// Or paste directly into Firebase Console → Firestore → Rules
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Profiles ──────────────────────────────────────────
+    // Users can only read/write their own profile
+    match /profiles/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // ── Goals ─────────────────────────────────────────────
+    match /goals/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // ── Tasks ─────────────────────────────────────────────
+    // Nested: tasks/{userId}/sessions/{date}/items/{taskId}
+    match /tasks/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // ── Energy ────────────────────────────────────────────
+    // Nested: energy/{userId}/days/{date}
+    match /energy/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // ── Rearrangements ────────────────────────────────────
+    // Nested: rearrangements/{userId}/logs/{id}
+    match /rearrangements/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    match /admins/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow write: if false; // only writable from Firebase console
+    }
+
+    match /sessions/{userId}/days/{date} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    match /stats/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Deny everything else
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

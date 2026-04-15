@@ -1,0 +1,25 @@
+.overlay {
+  position: fixed; inset: 0; background: var(--bg-overlay);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 400; padding: 1rem; animation: fadeIn 0.15s ease;
+}
+.modal {
+  background: var(--bg-card); border: 1px solid var(--border-soft);
+  border-radius: var(--radius-xl); width: 100%; max-width: 480px;
+  animation: slideUp 0.2s ease; box-shadow: var(--shadow-lift);
+  max-height: 90vh; display: flex; flex-direction: column;
+}
+.wide { max-width: 680px; }
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 1.5rem 0;
+}
+.title { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 500; }
+.close {
+  width: 28px; height: 28px; border: none; background: transparent;
+  color: var(--ink-muted); cursor: pointer; border-radius: var(--radius-sm);
+  font-size: 13px; display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition-fast);
+}
+.close:hover { background: var(--bg-surface); color: var(--ink-primary); }
+.body { padding: 1.25rem 1.5rem 1.5rem; overflow-y: auto; }

@@ -1,0 +1,57 @@
+/* ─────────────────────────────────────────────
+   CLARITY DESIGN TOKENS — v2
+   All visual values live here.
+   To theme for v3: add [data-theme="x"] block.
+───────────────────────────────────────────── */
+:root {
+  --bg-page:       #F5F0E8;
+  --bg-surface:    #EDE7D8;
+  --bg-muted:      #E4DCC8;
+  --bg-card:       #FDFAF4;
+  --bg-input:      #F5F0E8;
+  --bg-overlay:    rgba(44,36,22,0.38);
+
+  --ink-primary:   #2C2416;
+  --ink-secondary: #6B5F4A;
+  --ink-muted:     #9B8E7A;
+  --ink-inverse:   #FDF8F0;
+
+  --accent:        #7B5E3A;
+  --accent-warm:   #C4956A;
+  --accent-hover:  #6A4D2E;
+
+  --border-soft:   rgba(100,80,50,0.13);
+  --border-medium: rgba(100,80,50,0.22);
+  --border-strong: rgba(100,80,50,0.38);
+
+  --q1-ink:    #8B3A2A; --q1-bg: #FDF0ED; --q1-border: rgba(139,58,42,0.18);
+  --q2-ink:    #3A6B4A; --q2-bg: #EDF5F0; --q2-border: rgba(58,107,74,0.18);
+  --q3-ink:    #5A4A8B; --q3-bg: #F0EDF8; --q3-border: rgba(90,74,139,0.18);
+  --q4-ink:    #4A5A6B; --q4-bg: #EDF2F5; --q4-border: rgba(74,90,107,0.18);
+
+  --priority-1: #C44B4B;
+  --priority-2: #C48B2A;
+  --priority-3: #4B8B6A;
+  --priority-4: #8B8B8B;
+
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-pill: 999px;
+
+  --space-1:  4px;  --space-2:  8px;  --space-3: 12px;
+  --space-4: 16px;  --space-5: 20px;  --space-6: 24px;
+  --space-8: 32px;  --space-10:40px;  --space-12:48px;
+
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.2s ease;
+  --transition-spring: 0.3s cubic-bezier(0.34,1.56,0.64,1);
+
+  --shadow-card: 0 2px 8px rgba(44,36,22,0.07);
+  --shadow-lift: 0 4px 20px rgba(44,36,22,0.12);
+  --shadow-drawer: -4px 0 24px rgba(44,36,22,0.1);
+}

@@ -1,0 +1,23 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+}
+
+.petals {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.petal {
+  transition: opacity var(--transition-base), transform var(--transition-spring);
+}
+
+.label {
+  font-size: 10px;
+  color: var(--ink-muted);
+  letter-spacing: 0.5px;
+}

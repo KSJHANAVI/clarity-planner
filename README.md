@@ -114,6 +114,7 @@ src/
 - **Better drag-and-drop** → replace `src/hooks/useDragDrop.js` internals with dnd-kit
 - **Stripe payments** → `consumeEnergy` in `dbService.js` is the integration point for plan upgrades
 - **Backend API proxy** → update `API_URL` in `aiService.js` to point to your own server
+- **Voiceover feature** -> instead of typing out goals, I could use the voice button, take input as voice and covert to text to store
 
 ---
 
